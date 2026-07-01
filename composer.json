@@ -3,6 +3,7 @@
     "description": "Comprehensive API response builder for Laravel with success, error, pagination, streaming, download responses, auto-translation, and exception handling.",
     "type": "library",
     "license": "MIT",
+    "version": "1.0.0",
     "authors": [
         {
             "name": "Umesh",

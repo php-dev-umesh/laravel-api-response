@@ -17,4 +17,4 @@ composer test
 
 ## Reporting Issues
 
-Please report issues via the [GitHub issue tracker](https://github.com/php-dev-umesh/laravel-api-response/issues).
+Please report issues via the GitHub issue tracker at `https://github.com/php-dev-umesh/laravel-api-response/issues`.

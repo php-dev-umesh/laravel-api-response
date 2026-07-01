@@ -1,9 +1,9 @@
 # Laravel API Response Builder
 
-[![Latest Version](https://img.shields.io/packagist/v/php-dev-umesh/laravel-api-response)](https://packagist.org/packages/php-dev-umesh/laravel-api-response)
-[![PHP Version](https://img.shields.io/packagist/php-v/php-dev-umesh/laravel-api-response)](https://packagist.org/packages/php-dev-umesh/laravel-api-response)
-[![Laravel Version](https://img.shields.io/packagist/dependency-v/php-dev-umesh/laravel-api-response/laravel/framework)](https://packagist.org/packages/php-dev-umesh/laravel-api-response)
-[![License](https://img.shields.io/packagist/l/php-dev-umesh/laravel-api-response)](LICENSE)
+[![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)](https://github.com/php-dev-umesh/laravel-api-response)
+[![PHP](https://img.shields.io/badge/PHP-8.1+-%23777BB4.svg)](https://php.net)
+[![Laravel](https://img.shields.io/badge/Laravel-10|11|12-red.svg)](https://laravel.com)
+[![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 
 A comprehensive, fluent API response builder for Laravel with **30+ methods** covering success, error, pagination, API resources, streaming (NDJSON/SSE), file downloads, auto-translation, and exception handling — all in one consistent format.
 
