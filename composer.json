@@ -1,0 +1,32 @@
+{
+    "name": "php-dev-umesh/laravel-api-response",
+    "description": "Comprehensive API response builder for Laravel with success, error, pagination, streaming, download responses, auto-translation, and exception handling.",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Umesh",
+            "homepage": "https://github.com/php-dev-umesh"
+        }
+    ],
+    "require": {
+        "php": ">=8.1",
+        "laravel/framework": "^10.0|^11.0|^12.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "PhpDevUmesh\\LaravelApiResponse\\": "src/"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "PhpDevUmesh\\LaravelApiResponse\\ApiResponseServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "stable"
+}
