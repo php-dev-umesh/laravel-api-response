@@ -1,13 +1,13 @@
 # Laravel API Response Builder
 
-[![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)](https://github.com/php-dev-umesh/laravel-api-response)
+[![Version](https://img.shields.io/badge/version-1.0.1-blue.svg)](https://github.com/php-dev-umesh/laravel-api-response)
 [![PHP](https://img.shields.io/badge/PHP-8.1+-%23777BB4.svg)](https://php.net)
-[![Laravel](https://img.shields.io/badge/Laravel-10|11|12-red.svg)](https://laravel.com)
+[![Laravel](https://img.shields.io/badge/Laravel-10|11|12|13-red.svg)](https://laravel.com)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 
 A comprehensive, fluent API response builder for Laravel with **30+ methods** covering success, error, pagination, API resources, streaming (NDJSON/SSE), file downloads, auto-translation, and exception handling — all in one consistent format.
 
-**Supports Laravel 10, 11, and 12.**
+**Supports Laravel 10, 11, 12, and 13.**
 
 ---
 
@@ -305,7 +305,7 @@ class Handler extends ExceptionHandler
 }
 ```
 
-### Option B — Laravel 11/12: Bootstrap Registration
+### Option B — Laravel 11/12/13: Bootstrap Registration
 
 In `bootstrap/app.php`:
 
@@ -521,7 +521,7 @@ If you're using a custom `Helper` class similar to the one this package replaces
 
 ## Testing (using Orchestra Testbench)
 
-The package is tested against Laravel 10, 11, and 12 using Orchestra Testbench.
+The package is tested against Laravel 10, 11, 12, and 13 using Orchestra Testbench.
 
 ```bash
 composer require --dev orchestra/testbench
@@ -563,7 +563,7 @@ class ResponseBuilderTest extends Orchestra\Testbench\TestCase
 ## Requirements
 
 - PHP 8.1 or higher
-- Laravel 10, 11, or 12
+- Laravel 10, 11, 12, or 13
 
 ---
 

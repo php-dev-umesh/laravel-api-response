@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## 1.0.1 — 2026-07-01
+
+- Added Laravel 13 support
+
 ## 1.0.0 — 2026-07-01
 
 Initial release.
@@ -23,5 +27,5 @@ Initial release.
 - `WrapApiResponse` middleware for auto-wrapping existing JSON responses
 - Configurable response format keys (`success`, `status`, `message`, `data`)
 - `api_trans()` global helper function
-- Compatible with Laravel 10, 11, and 12
+- Compatible with Laravel 10, 11, 12, and 13
 - PHP 8.1 minimum requirement
