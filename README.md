@@ -1,13 +1,17 @@
-# Laravel API Response Builder
+# Laravel API Response Builder — Consistent JSON Responses for Laravel
 
-[![Version](https://img.shields.io/badge/version-1.0.1-blue.svg)](https://github.com/php-dev-umesh/laravel-api-response)
+[![Packagist Version](https://img.shields.io/packagist/v/php-dev-umesh/laravel-api-response)](https://packagist.org/packages/php-dev-umesh/laravel-api-response)
+[![Packagist Downloads](https://img.shields.io/packagist/dt/php-dev-umesh/laravel-api-response)](https://packagist.org/packages/php-dev-umesh/laravel-api-response)
 [![PHP](https://img.shields.io/badge/PHP-8.1+-%23777BB4.svg)](https://php.net)
 [![Laravel](https://img.shields.io/badge/Laravel-10|11|12|13-red.svg)](https://laravel.com)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
+[![GitHub Stars](https://img.shields.io/github/stars/php-dev-umesh/laravel-api-response?style=social)](https://github.com/php-dev-umesh/laravel-api-response)
 
-A comprehensive, fluent API response builder for Laravel with **30+ methods** covering success, error, pagination, API resources, streaming (NDJSON/SSE), file downloads, auto-translation, and exception handling — all in one consistent format.
+A comprehensive, fluent API response builder for Laravel with **30+ methods** covering success, error, pagination, API resources, streaming (NDJSON/SSE), file downloads, auto-translation, and exception handling — all in one consistent format. Eliminate duplicated JSON response code across your Laravel REST API. Includes **auto-translation**, **exception handling**, **ApiFormRequest**, and **auto-wrap middleware** for retrofitting existing APIs.
 
-**Supports Laravel 10, 11, 12, and 13.**
+**Supports Laravel 10, 11, 12, and 13. Works with PHP 8.1+.**
+
+> [📖 Documentation site](https://php-dev-umesh.github.io/laravel-api-response) • [Packagist](https://packagist.org/packages/php-dev-umesh/laravel-api-response) • [GitHub](https://github.com/php-dev-umesh/laravel-api-response)
 
 ---
 
@@ -29,17 +33,46 @@ A comprehensive, fluent API response builder for Laravel with **30+ methods** co
 
 ## Installation
 
+### From Packagist (recommended)
+
 ```bash
 composer require php-dev-umesh/laravel-api-response
 ```
 
-Publish the config file (optional — defaults work out of the box):
+### From GitHub Packages
+
+Add the GitHub Packages Composer registry and require the package:
+
+```json
+{
+    "repositories": [
+        { "type": "composer", "url": "https://composer.pkg.github.com/php-dev-umesh" }
+    ],
+    "require": {
+        "php-dev-umesh/laravel-api-response": "^1.0"
+    }
+}
+```
+
+Then authenticate with a [GitHub Personal Access Token](https://github.com/settings/tokens) (classic PAT with `read:packages` scope):
+
+```bash
+composer config --global github-oauth.github.com YOUR_PAT
+```
+
+Now run:
+
+```bash
+composer require php-dev-umesh/laravel-api-response
+```
+
+### Publish Config (Optional)
 
 ```bash
 php artisan vendor:publish --tag=api-response-config
 ```
 
-This creates `config/api-response.php`.
+This creates `config/api-response.php` (defaults work out of the box).
 
 ---
 
@@ -578,6 +611,16 @@ See [CHANGELOG](CHANGELOG.md) for recent changes.
 See [CONTRIBUTING](CONTRIBUTING.md) for details.
 
 ---
+
+## Community & Outreach
+
+- **[Laravel News](https://laravel-news.com)** — Follow for Laravel ecosystem updates
+- **[r/laravel](https://reddit.com/r/laravel)** — Discuss Laravel packages and development
+- **[Laravel.io Forum](https://laravel.io/forum)** — Community discussions
+- **[DEV.to](https://dev.to)** — Laravel tutorials and package showcases
+- **X/Twitter** — Tag [@laravelphp](https://twitter.com/laravelphp) with your API projects
+
+If you find this package useful, please [star the repo](https://github.com/php-dev-umesh/laravel-api-response) on GitHub — it helps others discover it!
 
 ## License
 

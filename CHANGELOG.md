@@ -5,6 +5,9 @@ All notable changes to this project will be documented in this file.
 ## 1.0.1 — 2026-07-01
 
 - Added Laravel 13 support
+- Added GitHub Packages distribution channel
+- Added SEO-optimized docs site (GitHub Pages)
+- Replaced `update-packagist.yml` with combined `release.yml` workflow (GitHub Release + Packagist notification)
 
 ## 1.0.0 — 2026-07-01
 

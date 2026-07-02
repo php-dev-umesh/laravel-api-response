@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Laravel API Response Builder — Success, Error, Pagination, Streaming & Downloads</title>
+  <meta name="description" content="Laravel API Response Builder — fluent PHP package with 30+ methods for success, error, paginated, streaming (SSE/NDJSON), CSV download, auto-translation, and exception handling responses. Supports Laravel 10-13.">
+  <meta name="keywords" content="laravel, api response, api response builder, json response, pagination, sse, server-sent events, ndjson, csv download, laravel package, php, rest api, auto-translation">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Laravel API Response Builder — 30+ Methods for Consistent APIs">
+  <meta property="og:description" content="Fluent Laravel package for success, error, paginated, streaming (SSE/NDJSON), CSV download, auto-translation, and exception handling responses.">
+  <meta property="og:url" content="https://php-dev-umesh.github.io/laravel-api-response">
+  <meta property="og:type" content="software">
+  <meta property="og:image" content="https://php-dev-umesh.github.io/laravel-api-response/assets/logo.svg">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Laravel API Response Builder">
+  <meta name="twitter:description" content="Fluent Laravel package for consistent API responses — success, error, pagination, streaming, downloads, auto-translate.">
+
+  <!-- Schema.org SoftwareApplication -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Laravel API Response Builder",
+    "description": "Laravel API response builder with 30+ methods for success, error, pagination, streaming (SSE/NDJSON), CSV downloads, auto-translation, and exception handling.",
+    "applicationCategory": "DeveloperApplication",
+    "operatingSystem": "Linux, macOS, Windows",
+    "softwareVersion": "1.0.1",
+    "author": {
+      "@type": "Person",
+      "name": "Umesh",
+      "url": "https://github.com/php-dev-umesh"
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    }
+  }
+  </script>
+
+  <link rel="stylesheet" href="assets/styles.css">
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <img src="assets/logo.svg" alt="Laravel API Response Builder logo" width="56" height="56">
+    <div>
+      <h1>Laravel <span>API Response Builder</span></h1>
+      <p>Fluent, consistent API responses for Laravel — 30+ methods, one package</p>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <h2>Build <span>consistent APIs</span> in minutes</h2>
+    <p>Stop duplicating JSON response logic across controllers. One package handles success, error, pagination, streaming, downloads, and exceptions — all with auto-translation and a consistent format.</p>
+
+    <div class="hero-code">
+      <span class="comment">// One consistent format everywhere</span><br>
+      <span class="keyword">ApiResponse</span>::<span class="func">success</span>($user, <span class="string">'user.found'</span>);<br>
+      <span class="comment">// {success: true, status: 200, message: "User found", data: {...}}</span><br><br>
+      <span class="keyword">ApiResponse</span>::<span class="func">error</span>(<span class="string">'user.not_found'</span>, <span class="string">404</span>);<br>
+      <span class="comment">// {success: false, status: 404, message: "User not found", data: null}</span>
+    </div>
+
+    <div class="badges">
+      <a href="https://packagist.org/packages/php-dev-umesh/laravel-api-response"><img src="https://img.shields.io/badge/Packagist-install-blue" alt="Packagist"></a>
+      <a href="https://github.com/php-dev-umesh/laravel-api-response"><img src="https://img.shields.io/github/stars/php-dev-umesh/laravel-api-response?style=social" alt="GitHub stars"></a>
+      <img src="https://img.shields.io/badge/PHP-8.1+-%23777BB4" alt="PHP 8.1+">
+      <img src="https://img.shields.io/badge/Laravel-10|11|12|13-red" alt="Laravel 10-13">
+      <img src="https://img.shields.io/badge/license-MIT-green" alt="MIT license">
+    </div>
+
+    <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
+      <a href="#install" class="btn btn-primary">Get Started</a>
+      <a href="https://github.com/php-dev-umesh/laravel-api-response" class="btn btn-outline">GitHub →</a>
+    </div>
+  </div>
+</section>
+
+<div class="container">
+  <div class="badges" style="margin-bottom:0">
+    <a href="https://packagist.org/packages/php-dev-umesh/laravel-api-response"><img src="https://img.shields.io/packagist/dt/php-dev-umesh/laravel-api-response" alt="Packagist Downloads"></a>
+    <a href="https://packagist.org/packages/php-dev-umesh/laravel-api-response"><img src="https://img.shields.io/packagist/v/php-dev-umesh/laravel-api-response" alt="Packagist Version"></a>
+  </div>
+</div>
+
+<section class="features" id="features">
+  <div class="feature-card">
+    <div class="icon">✅</div>
+    <h3>Success & Error</h3>
+    <p>Fluent success(), created(), ok(), noContent(), error(), validationError() — all consistent.</p>
+  </div>
+  <div class="feature-card">
+    <div class="icon">📄</div>
+    <h3>Pagination</h3>
+    <p>paginated() and paginatedResource() with standard meta or flat format. Zero boilerplate.</p>
+  </div>
+  <div class="feature-card">
+    <div class="icon">🌊</div>
+    <h3>Streaming</h3>
+    <p>NDJSON streams, Server-Sent Events (SSE), and lazy collection streaming for large datasets.</p>
+  </div>
+  <div class="feature-card">
+    <div class="icon">⬇️</div>
+    <h3>Downloads</h3>
+    <p>File download, inline preview, stream-generated CSV, storage disk downloads — all built in.</p>
+  </div>
+  <div class="feature-card">
+    <div class="icon">🌍</div>
+    <h3>Auto-Translation</h3>
+    <p>Every message auto-resolves via __("message.$key") with configurable prefix and fallback.</p>
+  </div>
+  <div class="feature-card">
+    <div class="icon">🛡️</div>
+    <h3>Exception Handling</h3>
+    <p>Throwable ApiException, RendersApiExceptions trait, HandlerRegister — handle 8+ exception types.</p>
+  </div>
+  <div class="feature-card">
+    <div class="icon">📝</div>
+    <h3>Form Request</h3>
+    <p>ApiFormRequest returns API-consistent validation errors without extra code.</p>
+  </div>
+  <div class="feature-card">
+    <div class="icon">🔄</div>
+    <h3>Auto-Wrap Middleware</h3>
+    <p>Retrofit existing response()->json() code without modifying a single controller.</p>
+  </div>
+</section>
+
+<section class="section" id="install">
+  <div class="install-tabs">
+    <h2>Installation</h2>
+
+    <div class="tab-buttons">
+      <button class="tab-btn active" onclick="switchTab(event,'packagist')">Packagist</button>
+      <button class="tab-btn" onclick="switchTab(event,'github-packages')">GitHub Packages</button>
+    </div>
+
+    <div id="tab-packagist" class="tab-content active">
+      <div class="code-block">
+        <span class="comment"># Install from Packagist (recommended)</span><br>
+        composer require php-dev-umesh/laravel-api-response<br><br>
+        <span class="comment"># Publish config (optional)</span><br>
+        php artisan vendor:publish --tag=api-response-config
+      </div>
+    </div>
+
+    <div id="tab-github-packages" class="tab-content">
+      <div class="code-block">
+        <span class="comment">// Add to composer.json</span><br>
+        {<br>
+        &nbsp;&nbsp;<span class="string">"repositories"</span>: [<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;{ <span class="string">"type"</span>: <span class="string">"composer"</span>, <span class="string">"url"</span>: <span class="string">"https://composer.pkg.github.com/php-dev-umesh"</span> }<br>
+        &nbsp;&nbsp;],<br>
+        &nbsp;&nbsp;<span class="string">"require"</span>: { <span class="string">"php-dev-umesh/laravel-api-response"</span>: <span class="string">"^1.0"</span> }<br>
+        }<br><br>
+        <span class="comment"># Authenticate (one-time)</span><br>
+        composer config --global github-oauth.github.com YOUR_PAT
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="quickstart">
+  <h2>Quick Start</h2>
+
+  <div class="code-block" style="margin-bottom:16px">
+    <span class="comment">// Using the Facade</span><br>
+    <span class="keyword">use PhpDevUmesh\LaravelApiResponse\Facades\ApiResponse</span>;<br><br>
+    ApiResponse::success($user, <span class="string">'user.found'</span>);<br>
+    ApiResponse::created($user, <span class="string">'user.created'</span>);<br>
+    ApiResponse::error(<span class="string">'user.not_found'</span>, <span class="string">404</span>);<br>
+    ApiResponse::paginated(User::paginate(), <span class="string">'users.loaded'</span>);
+  </div>
+
+  <div class="code-block">
+    <span class="comment">// Using the Trait in controllers</span><br>
+    <span class="keyword">class UserController extends Controller</span><br>
+    {<br>
+    &nbsp;&nbsp;<span class="keyword">use \PhpDevUmesh\LaravelApiResponse\Traits\ApiResponseTrait</span>;<br><br>
+    &nbsp;&nbsp;<span class="keyword">public function</span> <span class="func">index</span>()<br>
+    &nbsp;&nbsp;{<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">return</span> $this-><span class="func">paginated</span>(User::paginate(), <span class="string">'users.loaded'</span>);<br>
+    &nbsp;&nbsp;}<br>
+    }
+  </div>
+</section>
+
+<section class="section" id="methods">
+  <h2>All <span>Methods</span> at a Glance</h2>
+
+  <h3>Success</h3>
+  <div class="methods-grid">
+    <div class="method-item"><span class="name">success($data, $msg, $replace, $code)</span><div class="desc">Generic success (200)</div></div>
+    <div class="method-item"><span class="name">created($data, $msg, $replace)</span><div class="desc">Resource created (201)</div></div>
+    <div class="method-item"><span class="name">ok($data)</span><div class="desc">Success without message (200)</div></div>
+    <div class="method-item"><span class="name">noContent()</span><div class="desc">No content (204)</div></div>
+    <div class="method-item"><span class="name">message($msg, $replace)</span><div class="desc">Success with message only (200)</div></div>
+  </div>
+
+  <h3>Error</h3>
+  <div class="methods-grid">
+    <div class="method-item"><span class="name">error($msg, $code, $data)</span><div class="desc">Generic error (400)</div></div>
+    <div class="method-item"><span class="name">validationError($errors, $msg)</span><div class="desc">Validation error (422)</div></div>
+  </div>
+
+  <h3>Pagination</h3>
+  <div class="methods-grid">
+    <div class="method-item"><span class="name">paginated($paginator, $msg, $replace)</span><div class="desc">Paginated list</div></div>
+    <div class="method-item"><span class="name">paginatedResource($class, $paginator, $msg, $replace)</span><div class="desc">Paginated API resources</div></div>
+  </div>
+
+  <h3>Streaming</h3>
+  <div class="methods-grid">
+    <div class="method-item"><span class="name">stream($callback, $msg, $replace)</span><div class="desc">NDJSON stream</div></div>
+    <div class="method-item"><span class="name">streamJson($data)</span><div class="desc">Single JSON stream</div></div>
+    <div class="method-item"><span class="name">sse($callback)</span><div class="desc">Server-Sent Events</div></div>
+    <div class="method-item"><span class="name">lazy($cursor, $msg, $replace)</span><div class="desc">Lazy collection stream</div></div>
+  </div>
+
+  <h3>Downloads</h3>
+  <div class="methods-grid">
+    <div class="method-item"><span class="name">download($path, $name)</span><div class="desc">Force download file</div></div>
+    <div class="method-item"><span class="name">file($path)</span><div class="desc">Inline file preview</div></div>
+    <div class="method-item"><span class="name">streamDownload($callback, $name)</span><div class="desc">Generate file on the fly</div></div>
+    <div class="method-item"><span class="name">csv($headers, $rows, $filename)</span><div class="desc">Stream CSV download</div></div>
+    <div class="method-item"><span class="name">downloadFromDisk($disk, $path, $name)</span><div class="desc">From storage disk</div></div>
+  </div>
+
+  <h3>API Resources</h3>
+  <div class="methods-grid">
+    <div class="method-item"><span class="name">resource($class, $model, $msg)</span><div class="desc">Single resource</div></div>
+    <div class="method-item"><span class="name">collection($class, $models, $msg)</span><div class="desc">Resource collection</div></div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p>
+      <a href="https://packagist.org/packages/php-dev-umesh/laravel-api-response">Packagist</a> •
+      <a href="https://github.com/php-dev-umesh/laravel-api-response">GitHub</a> •
+      <a href="https://github.com/php-dev-umesh/laravel-api-response/blob/main/CHANGELOG.md">Changelog</a> •
+      <a href="https://github.com/php-dev-umesh/laravel-api-response/blob/main/LICENSE">MIT License</a>
+    </p>
+    <p style="margin-top:8px">Built for Laravel 10, 11, 12 & 13 • PHP 8.1+ • MIT Licensed</p>
+  </div>
+</footer>
+
+<script>
+function switchTab(e, name) {
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+  e.target.classList.add('active');
+  document.getElementById('tab-' + name).classList.add('active');
+}
+</script>
+
+</body>
+</html>
